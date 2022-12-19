@@ -2,7 +2,7 @@ name: main
 on: push
 jobs:
   job1:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
      - name: Functionality check
        shell: pwsh
