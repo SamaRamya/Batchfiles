@@ -1,0 +1,12 @@
+name: main
+on: push
+jobs:
+  job1:
+  runs on: ubuntu
+  steps:
+    name: Functionality check
+    shell: pwsh
+    run: |
+      $commit=(git log -n 1 --format="%H")
+      Write-Host "commit is $commit"
+      #$files=(git log -m -1 --name-only --pretty="" $commit)
